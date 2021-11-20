@@ -59,4 +59,9 @@ VALUES
 
 
 
- drop database Travel_agency
+INSERT INTO Country (Country)
+VALUES('China'),('United States'),('Portugal'),('Cuba'),('Russia'),('Brunei'),('China'),('Brazil'),('China'),('Philippines'),('China'),('China'),('Ukraine'),('Indonesia'),('Poland'),('Czech Republic'),('Bulgaria'),('Philippines'),
+('Uruguay'),('China'),('Portugal'),('China'),('Tanzania'),('China'),('Serbia'),('United States'),('Russia'),('Nigeria'),('Portugal'),('Finland'),('Indonesia'),('China'),('China'),('Philippines'),('Peru'),('China'),('Ukraine'),
+('Greece'),('China'),('Indonesia'),('Iran'),('China'),('Brazil'),('Indonesia'),('Indonesia'),('Indonesia'),('Indonesia'),('Denmark'),('Morocco'),('Uruguay');
+
+
