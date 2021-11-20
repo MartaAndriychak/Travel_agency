@@ -1,5 +1,3 @@
-
-
 USE Travel_agency;
 
 INSERT INTO Passport_type (Discription)
