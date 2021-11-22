@@ -60,8 +60,20 @@ VALUES
 
 
 INSERT INTO Country (Country)
-VALUES('China'),('United States'),('Portugal'),('Cuba'),('Russia'),('Brunei'),('China'),('Brazil'),('China'),('Philippines'),('China'),('China'),('Ukraine'),('Indonesia'),('Poland'),('Czech Republic'),('Bulgaria'),('Philippines'),
-('Uruguay'),('China'),('Portugal'),('China'),('Tanzania'),('China'),('Serbia'),('United States'),('Russia'),('Nigeria'),('Portugal'),('Finland'),('Indonesia'),('China'),('China'),('Philippines'),('Peru'),('China'),('Ukraine'),
-('Greece'),('China'),('Indonesia'),('Iran'),('China'),('Brazil'),('Indonesia'),('Indonesia'),('Indonesia'),('Indonesia'),('Denmark'),('Morocco'),('Uruguay');
+VALUES  ('Kenya'), ('Saudi Arabia'), ('Mongolia'), ('Portugal'), ('Ukraine'), ('Argentuna'),
+ ('Sweden'), ('Malaysia'), ('Ethiopia'), ('United States'), ('Egypt'), ('Mexico'), ('Central African Republic'), ('Nigeria'), ('Germany'), ('Dominica'), ('Israel'), ('Honduras'), ('Eritrea'),
+ ('Thailand'), ('Italy'), ('China'), ('Monaco'), ('Finland'), ('Spain'), ('Maldives'), ('Japan'), ('France'), ('Madagascar'), ('Armenia'), ('Bahamas'), ('Indonesia'), ('Czech Republic'), ('Philippines'), ('Russia'), ('Azerbaijan'), ('Philippines'),
+ ('Latvia'), ('Argentina'), ('Nigeria'), ('Costa Rica'), ('Poland'), ('Panama'), ('Greece'), ('Togo'), ('Brazil'), ('Benin'), ('Greece'), ('Portugal'), ('Honduras');
 
 
+ INSERT INTO City(City, ID_country)
+VALUES   ('Laylay', 22), ('Aswan', 11), ('Lomintsevskiy', 24), ('Shuikou', 31),
+ ('Lau', 46), ('PropriÃ¡', 48), ('Kertasari', 18), ('Chiba', 16), ('Shibata', 12), ('Karangwungu Lor', 20), ('Biba³', 11), ('El Dabaa', 11),
+ ('Norrahammar', 2), ('Yuhe', 23), ('Paris ', 35), ('Cernay', 24), ('Muara Sabak', 49), ('Paris', 28), ('Lyon', 28), ('Mbalmayo', 34),
+ ('Henghe', 33), ('Sioux Falls', 49), ('Braga', 48), ('San Isidro', 8), ('Bayangol', 11), ('Abu Hummus', 8), ('Domaniewice', 1), ('Bromma', 39),
+ ('Nanzhai', 10), ('Yingmaili', 20), ('Kyiv', 5), ('Oguta', 38), ('Zhuanqiang', 44), ('Koungou', 15), ('Houmt Souk', 45), ('Potelych', 22), ('Aracruz', 14),
+ ('Urzhar', 29), ('Loures', 49), ('Uzhhorod', 5), ('Zhaojia', 11), ('Taiyuan', 48), ('Odesa', 5), ('Huangjiazhai', 34), ('Huilong', 30), ('Gegu', 28), ('Adelaide Mail Centre', 12), ('Lviv', 5),
+ ('Sugito', 2), ('Kut Chap', 9);
+
+
+Select * from country
