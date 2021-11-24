@@ -1,7 +1,14 @@
+USE Master;
+GO
 
+DROP DATABASE IF exists Travel_agency;
+GO
 CREATE DATABASE Travel_agency;
-
+GO
 USE Travel_agency;
+GO
+
+
 
 CREATE TABLE Passport_type (
 	ID INT NOT NULL identity,
