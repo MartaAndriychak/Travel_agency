@@ -1,38 +1,40 @@
-Use Travel_agency;
+USE Travel_agency;
 GO
 
 -- Most popular country for trip during last year---
 
-Create VIEW [Popular_country]
-as 
-Select Country,count(Country) as Visit, DATEPART(year, voucher.start_date) as Year
-from Voucher
-left  join Tour
-on Voucher.ID_tour= Tour.ID
-left join City
-on Tour.ID_city= City.ID
-left join Country
-on City.ID_country=Country.ID
-where DATEPART(year, voucher.start_date)  = 2020
-group by Country, DATEPART(year, voucher.start_date);
+CREATE VIEW [Popular_country]
+AS
+SELECT 
+   Country,
+   COUNT(Country) AS Visit,
+   DATEPART(year, v.start_date) AS Year
+FROM Voucher AS V
+LEFT JOIN Tour AS T
+ON V.ID_tour= T.ID
+LEFT JOIN City as C ON T.ID_city= C.ID
+LEFT JOIN Country ON C.ID_country=Country.ID
+WHERE DATEPART(year, v.start_date)  = 2020
+GROUP BY Country, DATEPART(year, v.start_date);
 
-select * from Popular_country;
+SELECT * FROM Popular_country;
 
-go
+GO
 
 --- top 10 managers who have the biggest income
 
-create view Top_managers 
-as 
-select TOP 10 CONCAT ( Manager.Name , Manager.Last_name) AS Employee, sum (Tour.price) as Income  from Manager
-left join Voucher
-on Manager.ID= Voucher.ID_manager
-left join Tour
-on Voucher.ID_tour= Tour.ID
-where Tour.Price is not null
-group by CONCAT ( Manager.Name , Manager.Last_name)
-order by Income desc;
+CREATE VIEW Top_managers 
+AS 
+SELECT TOP 10 
+       CONCAT ( M.Name , M.Last_name) AS Employee, 
+	   SUM (T.price) AS Income  
+FROM Manager AS M
+LEFT JOIN Voucher AS V ON M.ID= V.ID_manager
+LEFT JOIN Tour AS T ON V.ID_tour= T.ID
+WHERE  T.Price IS NOT NULL
+GROUP BY CONCAT ( M.Name , M.Last_name)
+ORDER BY Income DESC;
 
 
-select * from  Top_managers;
+SELECT * FROM  Top_managers;
 
